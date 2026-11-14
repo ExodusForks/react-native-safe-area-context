@@ -79,6 +79,9 @@ target_compile_options(
   -Wall
 )
 
+# Match the Props layout of libappmodules, which RN 0.85+ builds with RN_SERIALIZABLE_STATE
+target_compile_definitions(${LIB_TARGET_NAME} PRIVATE RN_SERIALIZABLE_STATE)
+
 target_include_directories(
   ${CMAKE_PROJECT_NAME}
   PUBLIC
